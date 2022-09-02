@@ -14,6 +14,7 @@
   --main-bgr-cl: #ffffff;
   --secondary-bgd-cl: #2f303a;
   --grey-bgr-cl: #f5f4fa;
+  --icon-bgr-cl: #afb1b8;
 }
 
 body {
@@ -114,10 +115,10 @@ a {
   color: var(--link-txt-cl);
 }
 
-.list-nav-item:hover,
-.list-nav-item:focus,
-.list-contacts-item:hover,
-.list-contacts-item:focus {
+.link-nav:hover,
+.link-nav:focus,
+.link-contacts:hover,
+.link-contacts:focus {
   color: var(--link-txt-cl);
 }
 
@@ -140,6 +141,22 @@ a {
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
 }
+
+.contacts-icon {
+  fill: var(--main-txt-cl);
+}
+
+.link-contacts:hover .contacts-icon,
+.link-contacts:focus .contacts-icon {
+  fill: var(--link-txt-cl);
+}
+
+.link-contacts {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 /* Main */
 
 /* Hero-section */
@@ -297,11 +314,45 @@ a {
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
   text-align: center;
-  }
+  margin-bottom: 16px;
+}
 
-  .team-container-name {
-    padding: 30px 0;
-  }
+.team-container-name {
+  padding: 30px 0;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--main-bgr-cl);
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--link-txt-cl);
+}
+
+.socials-icon {
+  fill: var(--icon-bgr-cl);
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--main-bgr-cl);
+  background-color: var(--link-txt-cl);
+}
+*/
+
 
 /* Footer */
 
