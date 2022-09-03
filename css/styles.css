@@ -15,6 +15,8 @@
   --secondary-bgd-cl: #2f303a;
   --grey-bgr-cl: #f5f4fa;
   --icon-bgr-cl: #afb1b8;
+  --icon-second-bgr-cl: rgba(255, 255, 255, 0.1);
+  --border-cl: #eeeeee;
 }
 
 body {
@@ -163,6 +165,17 @@ a {
 .hero-section {
   background-color: var(--secondary-bgd-cl);
   padding: 200px 0;
+
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-container {
@@ -195,6 +208,7 @@ a {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  border: none;
 
   color: var(--white-txt-cl);
   background-color: var(--link-txt-cl);
@@ -233,6 +247,16 @@ a {
 
 .trait-item {
   width: 270px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--grey-bgr-cl);
+  margin-bottom: 30px;
 }
 
 .trait-title {
@@ -327,12 +351,17 @@ a {
   justify-content: center;
 }
 
+.socials-item {
+  width: 44px;
+  height: 44px;
+}
+
 .socials-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 100%;
+  height: 100%;
   background-color: var(--main-bgr-cl);
   border-radius: 50%;
 }
@@ -351,8 +380,54 @@ a {
   fill: var(--main-bgr-cl);
   background-color: var(--link-txt-cl);
 }
-*/
 
+/*Сlients*/
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-txt-cl);
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-icon {
+  fill: var(--icon-bgr-cl);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--link-txt-cl);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--link-txt-cl);
+}
 
 /* Footer */
 
@@ -392,6 +467,58 @@ a {
   color: var(--white-txt-cl);
 }
 
+.footer-container {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-txt-cl);
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.footer-socials-item {
+  width: 44px;
+  height: 44px;
+}
+
+.footer-socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--icon-second-bgr-cl);
+  border-radius: 50%;
+}
+
+.footer-socials-icon {
+  fill: var(--white-txt-cl);
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  background-color: var(--link-txt-cl);
+}
+
+.footer-socials-link:hover .footer-socials-icon,
+.footer-socials-link:focus .footer-socials-icon {
+  fill: var(--main-bgr-cl);
+  background-color: var(--link-txt-cl);
+}
+
 /* 2page Portfolio */
 
 .portfolio-list-btn {
@@ -423,6 +550,9 @@ a {
 .portfolio-btn:focus {
   color: var(--white-txt-cl);
   background-color: var(--link-txt-cl);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 .portfolio-btn.active {
   color: var(--white-txt-cl);
@@ -437,9 +567,9 @@ a {
 
 .portfolio-container-name {
   padding: 20px 24px;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
+  border-left: 1px solid var(--border-cl);
+  border-bottom: 1px solid var(--border-cl);
+  border-right: 1px solid var(--border-cl);
 }
 
 .portfolio-project-name {
@@ -455,4 +585,15 @@ a {
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
+}
+
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
